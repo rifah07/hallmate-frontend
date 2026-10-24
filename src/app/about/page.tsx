@@ -14,22 +14,56 @@ const HISTORY = [
 
 export default async function AboutPage() {
   const hall = await getPublic<HallInfo>('hall-info');
+  // The hall's own photo once the office uploads one; a drawing of the tower until then
+  const cover = hall?.coverUrl ?? '/illustrations/gallery-hall.svg';
+
   return (
     <>
       <PageHeader kicker="About" title="A home on campus" lead={hall?.location} />
       <section className="section">
-        <div className="container" style={{ display: 'grid', gap: '3rem', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 22rem), 1fr))' }}>
-          <div>
-            {hall ? <p style={{ fontSize: '1.1rem' }}>{hall.description}</p> : <Unavailable what="hall details" />}
+        <div className="container about-intro">
+          <figure className="about-figure">
+            {/* eslint-disable-next-line @next/next/no-img-element -- hall photo or local illustration */}
+            <img src={cover} alt="The sixteen-storey hall" width={800} height={600} referrerPolicy="no-referrer" />
+            {!hall?.coverUrl && <figcaption>The hall tower at dusk, drawn for HallMate.</figcaption>}
+          </figure>
+          <div className="stack">
+            {hall ? <p className="lead">{hall.description}</p> : <Unavailable what="hall details" />}
+            {hall && (
+              <div className="facts" style={{ marginTop: 0 }}>
+                <div className="fact">
+                  <b>{hall.established}</b>
+                  <span>first opened</span>
+                </div>
+                <div className="fact">
+                  <b>16</b>
+                  <span>storeys</span>
+                </div>
+                <div className="fact">
+                  <b>{hall.totalRooms}</b>
+                  <span>rooms</span>
+                </div>
+                <div className="fact">
+                  <b>{hall.capacity}</b>
+                  <span>residents</span>
+                </div>
+              </div>
+            )}
             {hall?.email && (
               <p>
                 Hall office: <a href={`mailto:${hall.email}`}>{hall.email}</a>
               </p>
             )}
           </div>
+        </div>
+      </section>
+
+      <section className="section section-tint">
+        <div className="container two-col">
           <div>
-            <h2>History</h2>
-            <ol className="timeline">
+            <span className="kicker">History</span>
+            <h2>Five years of the hall</h2>
+            <ol className="timeline" style={{ marginTop: '1.5rem' }}>
               {HISTORY.map((h) => (
                 <li key={h.date}>
                   <time>{h.date}</time>
@@ -38,16 +72,14 @@ export default async function AboutPage() {
               ))}
             </ol>
           </div>
-        </div>
-      </section>
-      <section className="section section-tint">
-        <div className="container" style={{ maxWidth: '46rem' }}>
-          <span className="kicker">The name</span>
-          <h2>Nawab Faizunnesa Choudhurani</h2>
-          <p>
-            A zamindar of Comilla and one of the earliest champions of women&apos;s education in Bengal. She founded a
-            girls&apos; high school in Comilla in 1873 and was granted the title of Nawab in 1889.
-          </p>
+          <div>
+            <span className="kicker">The name</span>
+            <h2>Nawab Faizunnesa Choudhurani</h2>
+            <p>
+              A zamindar of Comilla and one of the earliest champions of women&apos;s education in Bengal. She founded a
+              girls&apos; high school in Comilla in 1873 and was granted the title of Nawab in 1889.
+            </p>
+          </div>
         </div>
       </section>
     </>

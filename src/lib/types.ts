@@ -8,6 +8,7 @@ export interface HallInfo {
   capacity: number;
   totalRooms: number;
   logoUrl: string | null;
+  coverUrl: string | null;
   email: string | null;
   phone: string | null;
   vision: string | null;
