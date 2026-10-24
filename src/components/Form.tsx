@@ -63,7 +63,15 @@ export function Form({
               ))}
             </select>
           ) : multiline ? (
-            <textarea name={input.name} required={input.required ?? true} minLength={input.minLength} maxLength={input.maxLength} rows={6} />
+            <textarea
+              name={input.name}
+              defaultValue={input.defaultValue as string | undefined}
+              required={input.required ?? true}
+              minLength={input.minLength}
+              maxLength={input.maxLength}
+              rows={6}
+              aria-describedby={hint ? `${id}-${input.name}` : undefined}
+            />
           ) : (
             <input
               required
