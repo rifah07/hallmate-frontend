@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { site } from '@/lib/site';
+import { HallLogo } from './HallLogo';
 import { NavLinks } from './NavLinks';
 import { SessionLink } from './SessionLink';
 
@@ -8,7 +9,7 @@ export function Header() {
     <header className="site-header">
       <div className="container">
         <Link href="/" className="brand" aria-label={`${site.name}, home`}>
-          <span className="brand-mark" aria-hidden="true" />
+          <HallLogo />
           <span>
             <span className="brand-name">{site.short}</span>
             <span className="brand-sub">{site.name}</span>
@@ -18,8 +19,10 @@ export function Header() {
         <SessionLink className="btn btn-small header-cta" />
         <details className="menu">
           <summary>Menu</summary>
-          <NavLinks />
-          <SessionLink className="btn btn-small menu-cta" />
+          <div className="menu-panel">
+            <NavLinks />
+            <SessionLink className="btn btn-small menu-cta" />
+          </div>
         </details>
       </div>
     </header>
