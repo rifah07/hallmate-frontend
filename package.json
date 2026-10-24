@@ -11,7 +11,7 @@
     "test": "node --test 'src/**/*.test.mjs'"
   },
   "engines": {
-    "node": ">=20"
+    "node": "24.x"
   },
   "dependencies": {
     "next": "^16.4.2",
