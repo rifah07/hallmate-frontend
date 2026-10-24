@@ -1,5 +1,6 @@
 import { PageHeader } from '@/components/PageHeader';
 import { Unavailable } from '@/components/Unavailable';
+import { langOf } from '@/lib/format';
 import { getPublic } from '@/lib/public-api';
 import type { Facility } from '@/lib/types';
 
@@ -27,7 +28,7 @@ export default async function FacilitiesPage() {
             {facilities?.map((f) => (
               <article key={f.id} className="card">
                 <span className="chip chip-sage">{LABELS[f.category] ?? f.category}</span>
-                <h3 lang={/[ঀ-৿]/.test(f.name) ? 'bn' : undefined} style={{ marginTop: '0.75rem' }}>
+                <h3 lang={langOf(f.name)} style={{ marginTop: '0.75rem' }}>
                   {f.name}
                 </h3>
                 <p className="muted" style={{ margin: 0 }}>

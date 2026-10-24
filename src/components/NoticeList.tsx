@@ -1,4 +1,6 @@
+import { langOf } from '@/lib/format';
 import type { PublicNotice } from '@/lib/types';
+import { SampleBadge } from './SampleBadge';
 
 const parts = (iso: string | null) => {
   if (!iso) return null;
@@ -22,10 +24,11 @@ export function NoticeList({ notices }: { notices: PublicNotice[] }) {
               </span>
             </time>
             <div>
-              <p lang="bn" className="bn" style={{ margin: 0, fontWeight: 500 }}>
+              <p lang={langOf(n.title)} style={{ margin: 0, fontWeight: 500 }}>
                 {n.title}
               </p>
               {n.priority === 'URGENT' && <span className="chip chip-blush">Urgent</span>}
+              <SampleBadge show={n.isSample} />
             </div>
             {n.pdfUrl ? (
               <a className="btn btn-quiet btn-small" href={n.pdfUrl} target="_blank" rel="noopener noreferrer">
