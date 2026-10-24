@@ -50,7 +50,7 @@ export default function NoticesPage() {
       ? []
       : ([
           { name: 'audience', label: 'Who should see it', options: [['ALL', 'Everyone in the hall'], ['FLOOR', 'One floor']] },
-          { name: 'targetFloor', label: 'Floor (for a floor notice)', required: false, options: [['', '—'], ...FLOORS.map((f) => [f, `Floor ${f}`])] },
+          { name: 'targetFloor', label: 'Floor (for a floor notice)', required: false, options: [['', 'Whole hall'], ...FLOORS.map((f) => [f, `Floor ${f}`])] },
         ] as Field[])),
     { name: 'expiresAt', label: 'Show until (optional)', type: 'date', required: false, min: dhakaToday() },
     { name: 'pdf', label: 'PDF attachment (optional)', type: 'file', accept: 'application/pdf', required: false, hint: 'PDF only, up to 4 MB.' },

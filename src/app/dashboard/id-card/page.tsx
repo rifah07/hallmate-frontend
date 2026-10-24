@@ -53,7 +53,7 @@ export default function IdCardPage() {
                 </>
               )}
               <dt>Room</dt>
-              <dd>{card.room ?? '—'}</dd>
+              <dd>{card.room ?? 'Not allotted'}</dd>
               {card.bloodGroup && (
                 <>
                   <dt>Blood group</dt>
