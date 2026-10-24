@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 720" role="img" aria-labelledby="t">
+  <title id="t">The sixteen-storey hall at sunset, with trees and the gate</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e1d9f0"/>
+      <stop offset="0.6" stop-color="#f9eaed"/>
+      <stop offset="1" stop-color="#fdf6f7"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f0ecf8"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e1d9f0"/>
+      <stop offset="1" stop-color="#c3a7c6"/>
+    </linearGradient>
+    <pattern id="win" width="34" height="34" patternUnits="userSpaceOnUse" x="262" y="96">
+      <rect x="6" y="8" width="22" height="18" rx="3" fill="#7b5182" opacity="0.22"/>
+    </pattern>
+    <pattern id="winlit" width="34" height="34" patternUnits="userSpaceOnUse" x="262" y="96">
+      <rect x="6" y="8" width="22" height="18" rx="3" fill="#f2d6dc"/>
+    </pattern>
+    <pattern id="jali" width="28" height="28" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#7b5182" stroke-width="1.2" opacity="0.55">
+        <circle cx="0" cy="0" r="14"/><circle cx="28" cy="0" r="14"/><circle cx="0" cy="28" r="14"/><circle cx="28" cy="28" r="14"/><circle cx="14" cy="14" r="14"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="720" fill="url(#sky)"/>
+  <circle cx="610" cy="150" r="58" fill="#f2d6dc"/>
+  <circle cx="610" cy="150" r="88" fill="#f2d6dc" opacity="0.35"/>
+  <g fill="#ffffff" opacity="0.75">
+    <ellipse cx="150" cy="140" rx="70" ry="16"/>
+    <ellipse cx="200" cy="128" rx="44" ry="14"/>
+    <ellipse cx="660" cy="250" rx="60" ry="12"/>
+  </g>
+
+  <!-- The tower: sixteen storeys -->
+  <rect x="540" y="130" width="46" height="480" fill="url(#side)"/>
+  <rect x="262" y="96" width="278" height="514" fill="url(#wall)"/>
+  <rect x="262" y="96" width="278" height="514" fill="url(#win)"/>
+  <g>
+    <rect x="296" y="164" width="34" height="34" fill="url(#winlit)"/>
+    <rect x="432" y="232" width="34" height="34" fill="url(#winlit)"/>
+    <rect x="364" y="334" width="34" height="34" fill="url(#winlit)"/>
+    <rect x="466" y="436" width="34" height="34" fill="url(#winlit)"/>
+    <rect x="296" y="470" width="34" height="34" fill="url(#winlit)"/>
+  </g>
+  <rect x="252" y="84" width="298" height="16" rx="4" fill="#4b2a52"/>
+  <rect x="380" y="56" width="42" height="30" rx="4" fill="#7b5182"/>
+  <g stroke="#ebe2e7" stroke-width="2">
+    <line x1="262" y1="198" x2="540" y2="198"/>
+    <line x1="262" y1="334" x2="540" y2="334"/>
+    <line x1="262" y1="470" x2="540" y2="470"/>
+  </g>
+
+  <!-- Entrance with a jali screen -->
+  <rect x="330" y="540" width="142" height="70" fill="url(#jali)"/>
+  <rect x="330" y="540" width="142" height="70" fill="none" stroke="#4b2a52" stroke-width="3"/>
+  <path d="M376 610 v-38 a25 25 0 0 1 50 0 v38z" fill="#4b2a52"/>
+
+  <!-- Trees -->
+  <g>
+    <rect x="128" y="470" width="12" height="150" fill="#4f7260"/>
+    <circle cx="134" cy="450" r="62" fill="#4f7260"/>
+    <circle cx="96" cy="490" r="40" fill="#5f8571"/>
+    <circle cx="172" cy="486" r="44" fill="#6b9a80"/>
+    <rect x="664" y="486" width="11" height="130" fill="#4f7260"/>
+    <circle cx="670" cy="468" r="54" fill="#5f8571"/>
+    <circle cx="704" cy="502" r="36" fill="#4f7260"/>
+    <circle cx="214" cy="560" r="30" fill="#6b9a80"/>
+    <circle cx="612" cy="566" r="26" fill="#6b9a80"/>
+  </g>
+
+  <!-- Ground, path and gate -->
+  <rect y="606" width="800" height="114" fill="#e9f0ea"/>
+  <path d="M376 610 L330 720 H472 L426 610z" fill="#fdfbfa"/>
+  <g fill="#4b2a52">
+    <rect x="250" y="596" width="14" height="44" rx="2"/>
+    <rect x="538" y="596" width="14" height="44" rx="2"/>
+  </g>
+  <g stroke="#4b2a52" stroke-width="3">
+    <line x1="80" y1="626" x2="250" y2="626"/>
+    <line x1="552" y1="626" x2="720" y2="626"/>
+  </g>
+</svg>

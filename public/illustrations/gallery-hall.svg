@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">The hall tower at dusk, its windows lit</title>
+  <defs>
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2e1835"/>
+      <stop offset="0.7" stop-color="#7b5182"/>
+      <stop offset="1" stop-color="#c3a7c6"/>
+    </linearGradient>
+    <pattern id="w" width="30" height="30" patternUnits="userSpaceOnUse" x="290" y="90">
+      <rect x="5" y="7" width="20" height="16" rx="2" fill="#2e1835" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#dusk)"/>
+  <circle cx="160" cy="110" r="34" fill="#fdf6f7"/>
+  <circle cx="174" cy="102" r="30" fill="#2e1835"/>
+  <g fill="#fdf6f7"><circle cx="560" cy="80" r="2"/><circle cx="640" cy="140" r="1.6"/><circle cx="96" cy="200" r="1.6"/><circle cx="700" cy="60" r="2"/><circle cx="460" cy="40" r="1.4"/></g>
+  <rect x="290" y="90" width="220" height="430" fill="#4b2a52"/>
+  <rect x="290" y="90" width="220" height="430" fill="url(#w)"/>
+  <g fill="#f2d6dc">
+    <rect x="295" y="127" width="20" height="16" rx="2"/><rect x="385" y="157" width="20" height="16" rx="2"/><rect x="445" y="127" width="20" height="16" rx="2"/>
+    <rect x="325" y="217" width="20" height="16" rx="2"/><rect x="475" y="247" width="20" height="16" rx="2"/><rect x="415" y="307" width="20" height="16" rx="2"/>
+    <rect x="295" y="337" width="20" height="16" rx="2"/><rect x="355" y="397" width="20" height="16" rx="2"/><rect x="445" y="427" width="20" height="16" rx="2"/>
+    <rect x="385" y="457" width="20" height="16" rx="2"/><rect x="325" y="277" width="20" height="16" rx="2"/>
+  </g>
+  <rect x="280" y="78" width="240" height="14" rx="3" fill="#2e1835"/>
+  <rect x="510" y="110" width="40" height="410" fill="#2e1835" opacity="0.55"/>
+  <rect y="510" width="800" height="90" fill="#2e1835"/>
+  <g fill="#1f1024"><circle cx="150" cy="500" r="56"/><circle cx="210" cy="520" r="40"/><circle cx="640" cy="505" r="50"/><circle cx="690" cy="525" r="34"/></g>
+</svg>

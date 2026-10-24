@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">The dining hall: long tables laid with plates and glasses under hanging lamps</title>
+  <rect width="800" height="600" fill="#fdf6f7"/>
+  <rect y="380" width="800" height="220" fill="#f2d6dc"/>
+  <g stroke="#4b2a52" stroke-width="3"><line x1="200" y1="0" x2="200" y2="120"/><line x1="400" y1="0" x2="400" y2="100"/><line x1="600" y1="0" x2="600" y2="120"/></g>
+  <g fill="#7b5182"><path d="M168 150 a32 32 0 0 1 64 0z"/><path d="M368 130 a32 32 0 0 1 64 0z"/><path d="M568 150 a32 32 0 0 1 64 0z"/></g>
+  <g fill="#f9eaed" opacity="0.8"><path d="M170 150 l-40 110 h140 l-40 -110z"/><path d="M370 130 l-40 110 h140 l-40 -110z"/><path d="M570 150 l-40 110 h140 l-40 -110z"/></g>
+  <g>
+    <path d="M60 330 h680 l40 70 h-760z" fill="#4b2a52"/>
+    <rect x="40" y="400" width="720" height="16" fill="#2e1835"/>
+    <rect x="80" y="416" width="14" height="110" fill="#2e1835"/><rect x="706" y="416" width="14" height="110" fill="#2e1835"/>
+  </g>
+  <g>
+    <ellipse cx="160" cy="358" rx="38" ry="12" fill="#ffffff"/><ellipse cx="160" cy="356" rx="22" ry="6" fill="#e9f0ea"/>
+    <ellipse cx="320" cy="358" rx="38" ry="12" fill="#ffffff"/><ellipse cx="320" cy="356" rx="22" ry="6" fill="#f0ecf8"/>
+    <ellipse cx="480" cy="358" rx="38" ry="12" fill="#ffffff"/><ellipse cx="480" cy="356" rx="22" ry="6" fill="#e9f0ea"/>
+    <ellipse cx="640" cy="358" rx="38" ry="12" fill="#ffffff"/><ellipse cx="640" cy="356" rx="22" ry="6" fill="#f0ecf8"/>
+  </g>
+  <g fill="#e1d9f0" stroke="#7b5182" stroke-width="2">
+    <rect x="212" y="326" width="16" height="28" rx="3"/><rect x="372" y="326" width="16" height="28" rx="3"/><rect x="532" y="326" width="16" height="28" rx="3"/><rect x="692" y="326" width="16" height="28" rx="3"/>
+  </g>
+  <g fill="#4f7260"><circle cx="400" cy="318" r="14"/><circle cx="388" cy="324" r="10"/><circle cx="412" cy="324" r="10"/></g>
+  <rect x="394" y="326" width="12" height="18" fill="#c3a7c6"/>
+</svg>

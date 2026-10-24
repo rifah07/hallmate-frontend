@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BlockedDetails } from '@/components/BlockedDetails';
+import { PhoneLink } from '@/components/PhoneLink';
 import { getPublic } from '@/lib/public-api';
 import { site } from '@/lib/site';
 import type { HallInfo } from '@/lib/types';
@@ -37,8 +38,6 @@ export default async function AccountStatusPage({ searchParams }: PageProps<'/ac
   const { state } = await searchParams;
   const info = STATES[typeof state === 'string' ? state : ''] ?? STATES.INACTIVE;
   const hall = await getPublic<HallInfo>('hall-info');
-  const email = hall?.email ?? site.email;
-
   return (
     <section className="section status-page">
       <div className="container">
@@ -56,12 +55,14 @@ export default async function AccountStatusPage({ searchParams }: PageProps<'/ac
               {site.university}
             </p>
             <ul>
-              <li>
-                Email: <a href={`mailto:${email}`}>{email}</a>
-              </li>
+              {hall?.email && (
+                <li>
+                  Email: <a href={`mailto:${hall.email}`}>{hall.email}</a>
+                </li>
+              )}
               {hall?.phone && (
                 <li>
-                  Phone: <a href={`tel:${hall.phone.replace(/\s/g, '')}`}>{hall.phone}</a>
+                  Phone: <PhoneLink phone={hall.phone} />
                 </li>
               )}
             </ul>

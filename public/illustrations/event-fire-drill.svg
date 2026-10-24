@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Fire safety: an extinguisher beside a green exit sign above the stairs</title>
+  <rect width="800" height="600" fill="#f0ecf8"/>
+  <g fill="#e1d9f0">
+    <path d="M430 600 V520 H520 V440 H610 V360 H700 V280 H800 V600z"/>
+  </g>
+  <g stroke="#c3a7c6" stroke-width="4" fill="none"><path d="M430 520 H520 V440 H610 V360 H700 V280 H800"/></g>
+  <path d="M460 470 L780 210" stroke="#7b5182" stroke-width="6"/>
+  <g>
+    <rect x="520" y="90" width="220" height="90" rx="10" fill="#4f7260"/>
+    <path d="M560 160 v-50 h28 M560 135 h22" stroke="#fdf6f7" stroke-width="8" fill="none"/>
+    <path d="M620 110 l60 25 -60 25z" fill="#fdf6f7"/>
+    <rect x="690" y="120" width="26" height="30" rx="3" fill="#fdf6f7"/>
+  </g>
+  <g>
+    <rect x="160" y="230" width="150" height="300" rx="60" fill="#a8324c"/>
+    <rect x="160" y="300" width="150" height="70" fill="#fdf6f7"/>
+    <path d="M190 330 h90 M190 348 h60" stroke="#a8324c" stroke-width="6"/>
+    <rect x="205" y="180" width="60" height="54" rx="8" fill="#2e1835"/>
+    <path d="M265 196 h70 q30 0 30 30 v40" stroke="#2e1835" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <rect x="352" y="262" width="26" height="40" rx="6" fill="#2e1835"/>
+    <path d="M205 186 l-40 -30 h40" stroke="#2e1835" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <rect x="170" y="520" width="130" height="16" rx="6" fill="#2e1835"/>
+  </g>
+  <g fill="#c3a7c6" opacity="0.8"><circle cx="400" cy="340" r="16"/><circle cx="430" cy="372" r="22"/><circle cx="398" cy="392" r="12"/></g>
+</svg>

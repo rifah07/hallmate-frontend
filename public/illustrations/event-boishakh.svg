@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">An alpana painted for Pohela Boishakh: concentric petals and dots in white on deep rose</title>
+  <rect width="800" height="600" fill="#a8324c"/>
+  <g transform="translate(400 300)" fill="none" stroke="#fdf6f7" stroke-linecap="round">
+    <circle r="250" stroke-width="3" opacity="0.4"/>
+    <circle r="215" stroke-width="6"/>
+    <g stroke-width="4">
+      <path id="petal" d="M0 -200 C40 -160 40 -120 0 -95 C-40 -120 -40 -160 0 -200z"/>
+      <use href="#petal" transform="rotate(30)"/><use href="#petal" transform="rotate(60)"/><use href="#petal" transform="rotate(90)"/>
+      <use href="#petal" transform="rotate(120)"/><use href="#petal" transform="rotate(150)"/><use href="#petal" transform="rotate(180)"/>
+      <use href="#petal" transform="rotate(210)"/><use href="#petal" transform="rotate(240)"/><use href="#petal" transform="rotate(270)"/>
+      <use href="#petal" transform="rotate(300)"/><use href="#petal" transform="rotate(330)"/>
+    </g>
+    <circle r="88" stroke-width="5"/>
+    <g stroke-width="3">
+      <path id="leaf" d="M0 -82 Q22 -58 0 -34 Q-22 -58 0 -82z"/>
+      <use href="#leaf" transform="rotate(45)"/><use href="#leaf" transform="rotate(90)"/><use href="#leaf" transform="rotate(135)"/>
+      <use href="#leaf" transform="rotate(180)"/><use href="#leaf" transform="rotate(225)"/><use href="#leaf" transform="rotate(270)"/><use href="#leaf" transform="rotate(315)"/>
+    </g>
+    <circle r="22" fill="#fdf6f7" stroke="none"/>
+    <circle r="230" stroke-width="10" stroke-dasharray="0.1 24"/>
+  </g>
+  <g fill="#fdf6f7">
+    <circle cx="60" cy="60" r="6"/><circle cx="740" cy="60" r="6"/><circle cx="60" cy="540" r="6"/><circle cx="740" cy="540" r="6"/>
+    <circle cx="90" cy="40" r="3"/><circle cx="710" cy="40" r="3"/><circle cx="90" cy="560" r="3"/><circle cx="710" cy="560" r="3"/>
+  </g>
+</svg>

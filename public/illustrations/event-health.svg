@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">Health check-up: a stethoscope around a heart, with fruit and a glass of water</title>
+  <rect width="800" height="600" fill="#e9f0ea"/>
+  <circle cx="400" cy="300" r="230" fill="#ffffff"/>
+  <path d="M400 420 C250 330 250 200 330 190 C370 185 395 215 400 240 C405 215 430 185 470 190 C550 200 550 330 400 420z" fill="#a8324c"/>
+  <path d="M300 280 h50 l20 -40 30 80 20 -40 h80" stroke="#fdf6f7" stroke-width="10" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <g fill="none" stroke="#2e1835" stroke-width="10" stroke-linecap="round">
+    <path d="M250 110 v70 q0 70 70 70"/>
+    <path d="M340 110 v70 q0 70 -70 70"/>
+    <path d="M295 250 v110 q0 110 110 120 q100 6 110 -70 v-30"/>
+  </g>
+  <circle cx="515" cy="380" r="28" fill="#2b6a67"/><circle cx="515" cy="380" r="12" fill="#e9f0ea"/>
+  <circle cx="250" cy="106" r="10" fill="#2e1835"/><circle cx="340" cy="106" r="10" fill="#2e1835"/>
+  <g>
+    <circle cx="600" cy="500" r="40" fill="#4f7260"/><path d="M600 462 q10 -20 30 -18" stroke="#2e1835" stroke-width="5" fill="none"/>
+    <rect x="160" y="430" width="70" height="110" rx="8" fill="#e1d9f0" stroke="#7b5182" stroke-width="4"/>
+    <rect x="164" y="470" width="62" height="66" rx="5" fill="#c3a7c6" opacity="0.6"/>
+  </g>
+</svg>

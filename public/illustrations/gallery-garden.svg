@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t">
+  <title id="t">The courtyard garden: trees, flower beds and a bench</title>
+  <defs>
+    <linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f0ea"/><stop offset="1" stop-color="#fdfbfa"/></linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#s)"/>
+  <rect y="400" width="800" height="200" fill="#cfe0d4"/>
+  <path d="M330 600 Q400 470 470 400 h40 Q450 480 430 600z" fill="#fdfbfa"/>
+  <g>
+    <rect x="150" y="250" width="16" height="170" fill="#4f7260"/>
+    <circle cx="158" cy="220" r="86" fill="#4f7260"/><circle cx="104" cy="270" r="56" fill="#5f8571"/><circle cx="214" cy="262" r="60" fill="#6b9a80"/>
+    <rect x="620" y="280" width="14" height="140" fill="#4f7260"/>
+    <circle cx="627" cy="250" r="70" fill="#5f8571"/><circle cx="676" cy="290" r="46" fill="#4f7260"/>
+  </g>
+  <g>
+    <ellipse cx="200" cy="470" rx="130" ry="34" fill="#5f8571"/>
+    <g fill="#f2d6dc"><circle cx="110" cy="462" r="9"/><circle cx="150" cy="452" r="9"/><circle cx="196" cy="460" r="9"/><circle cx="240" cy="450" r="9"/><circle cx="286" cy="464" r="9"/></g>
+    <g fill="#c3a7c6"><circle cx="130" cy="476" r="8"/><circle cx="176" cy="480" r="8"/><circle cx="220" cy="474" r="8"/><circle cx="264" cy="482" r="8"/></g>
+    <g fill="#ffffff"><circle cx="150" cy="452" r="3"/><circle cx="240" cy="450" r="3"/><circle cx="196" cy="460" r="3"/></g>
+  </g>
+  <g>
+    <rect x="560" y="440" width="150" height="14" rx="4" fill="#7b5182"/>
+    <rect x="560" y="412" width="150" height="10" rx="4" fill="#7b5182"/>
+    <rect x="572" y="454" width="10" height="40" fill="#4b2a52"/><rect x="688" y="454" width="10" height="40" fill="#4b2a52"/>
+  </g>
+  <g fill="#ffffff" opacity="0.85"><ellipse cx="520" cy="110" rx="70" ry="14"/><ellipse cx="560" cy="98" rx="40" ry="12"/></g>
+</svg>

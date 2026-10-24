@@ -1,5 +1,6 @@
 import { ContactForm } from '@/components/ContactForm';
 import { PageHeader } from '@/components/PageHeader';
+import { PhoneLink } from '@/components/PhoneLink';
 import { getPublic } from '@/lib/public-api';
 import { site } from '@/lib/site';
 import type { HallInfo } from '@/lib/types';
@@ -8,7 +9,6 @@ export const metadata = { title: 'Contact' };
 
 export default async function ContactPage() {
   const hall = await getPublic<HallInfo>('hall-info');
-  const email = hall?.email ?? site.email;
   return (
     <>
       <PageHeader
@@ -26,12 +26,14 @@ export default async function ContactPage() {
                 <br />
                 {hall?.location ?? site.university}
               </p>
-              <p style={{ margin: 0 }}>
-                <a href={`mailto:${email}`}>{email}</a>
-              </p>
+              {hall?.email && (
+                <p style={{ margin: 0 }}>
+                  <a href={`mailto:${hall.email}`}>{hall.email}</a>
+                </p>
+              )}
               {hall?.phone && (
                 <p style={{ margin: 0 }}>
-                  <a href={`tel:${hall.phone.replace(/\s/g, '')}`}>{hall.phone}</a>
+                  <PhoneLink phone={hall.phone} />
                 </p>
               )}
             </div>
