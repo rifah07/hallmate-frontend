@@ -22,6 +22,10 @@ const csp = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // People now has a page per group; old links keep working
+  async redirects() {
+    return [{ source: '/people', destination: '/provost', permanent: true }];
+  },
   async headers() {
     return [
       {
