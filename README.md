@@ -3,7 +3,7 @@
 The website and resident portal for **Nawab Faizunnesa Chowdhurani Hall**, the women's residential hall of Jagannath University, Dhaka. A public site for the hall, and one sign-in that gives every resident and staff member a dashboard shaped to their job.
 
 **Stack:** Next.js 16 (App Router) · React 19 · TypeScript · plain CSS with design tokens · no UI library · no tracking
-**API:** [hallmate-backend](https://github.com/rifah07/hallmate-backend) (Express 5, Prisma, PostgreSQL) · **Deploy guide:** [hallmate-backend/docs/DEPLOY.md](https://github.com/rifah07/hallmate-backend/blob/master/docs/DEPLOY.md)
+**Live:** [hallmate.vercel.app](https://hallmate.vercel.app) · **Try every role:** [demo accounts](https://github.com/rifah07/hallmate-backend/blob/master/docs/DEMO_ACCOUNTS.md) (read-only) · **API:** [hallmate-backend](https://github.com/rifah07/hallmate-backend) (Express 5, Prisma, PostgreSQL)
 
 | Resident dashboard | Digital ID card |
 |---|---|
@@ -37,7 +37,7 @@ _Screenshots use sample data._
 | Dining staff | How many breakfasts, lunches and dinners to cook on a given day |
 | Support staff | The repairs assigned to them, and notices |
 
-The public site has the hall's history, people, facilities, notices (Bangla content, English interface), gallery and a contact form.
+The public site has about the hall, achievements, events, the provost and every former provost, house tutors with their floors, the hall office, facilities, dining, gallery, admission with online applications and tracking, notices with PDFs, an FAQ and a contact form, all read live from the API (Bangla content, English interface). Sample content is badged "Sample", and no photos of real people are used: profiles show an initial until the hall uploads a photo.
 
 ## Architecture
 
@@ -91,10 +91,6 @@ npm run dev                  # http://localhost:3000
 | `npm test` | Unit tests for the security helpers and request mapping (`node --test`, no extra dependencies) |
 | `npm run build` | Production build |
 
-## Deploy
-
-Vercel Hobby (free, no card): import the repo, set `BACKEND_URL`, `INTERNAL_API_KEY` and `NEXT_PUBLIC_SITE_URL`, and deploy. Then set the API's `WEB_APP_URL` to this site's URL so payment results come back here.
-
 ## Decisions
 
 | Choice | Why |
@@ -107,7 +103,7 @@ Vercel Hobby (free, no card): import the repo, set `BACKEND_URL`, `INTERNAL_API_
 
 ## Status
 
-Feature-complete for the hall's daily work. Next: deployment, and a verified email domain so residents receive their codes by email.
+Live at [hallmate.vercel.app](https://hallmate.vercel.app). Next: a verified email domain so residents receive their codes by email.
 
 ## Author
 
