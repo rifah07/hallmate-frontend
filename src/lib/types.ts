@@ -10,6 +10,8 @@ export interface HallInfo {
   logoUrl: string | null;
   email: string | null;
   phone: string | null;
+  vision: string | null;
+  mission: string | null;
 }
 
 export interface Provost {
@@ -25,6 +27,7 @@ export interface Provost {
 }
 
 export interface HouseTutor {
+  isSample?: boolean;
   id: string;
   name: string;
   designation: string;
@@ -33,6 +36,7 @@ export interface HouseTutor {
   email: string | null;
   photoUrl: string | null;
   bio: string | null;
+  officeHours?: string | null;
 }
 
 export interface Staff {
@@ -55,6 +59,7 @@ export interface Facility {
 }
 
 export interface PublicNotice {
+  isSample?: boolean;
   id: string;
   title: string;
   slug: string;
@@ -66,10 +71,74 @@ export interface PublicNotice {
 }
 
 export interface GalleryItem {
+  isSample?: boolean;
   id: string;
   title: string;
   imageUrl: string;
   category: string;
+}
+
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  year: number;
+  isFeatured: boolean;
+  isSample?: boolean;
+}
+
+export interface PublicEvent {
+  id: string;
+  title: string;
+  slug: string;
+  summary: string | null;
+  venue: string | null;
+  imageUrl: string | null;
+  startDate: string;
+  endDate: string | null;
+  isAllDay: boolean;
+  isSample?: boolean;
+}
+
+export interface Faq {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+  isSample?: boolean;
+}
+
+export interface DiningInfo {
+  mealPlan: { meal: string; time: string; price: number }[];
+  weeklyMenu: { day: string; lunch: string; dinner: string }[] | null;
+  specialDiets: string[];
+  capacity: number | null;
+  location: string | null;
+  notice: string | null;
+  isSample?: boolean;
+}
+
+export interface AdmissionInfo {
+  session: string;
+  eligibility: string;
+  process: string;
+  requiredDocs: string[];
+  importantDates: { label: string; date: string }[] | null;
+  seatCapacity: number | null;
+  applicationFee: number | null;
+  contactEmail: string | null;
+  isSample?: boolean;
+}
+
+export interface TrackedApplication {
+  id: string;
+  type: string;
+  status: string;
+  subject: string;
+  createdAt: string;
+  updatedAt: string;
+  responseNote?: string | null;
 }
 
 // ── Signed-in user (GET /api/auth/profile) ──

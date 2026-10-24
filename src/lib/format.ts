@@ -24,6 +24,12 @@ export const formatDateTime = (iso: string | null | undefined) => (iso ? dayTime
 // Whole taka, grouped the Bangladeshi way: ৳1,25,000
 export const formatTaka = (amount: number) => `৳${amount.toLocaleString('en-IN')}`;
 
+// lang="bn" for Bangla text, so it gets its font and line height
+export const langOf = (text: string) => (/[ঀ-৿]/.test(text) ? 'bn' : undefined);
+
+// "Professor Dr. Anjue Mane Ara" → "A": skips a title in English or Bangla
+export const initialOf = (name: string) => name.replace(/^(Professor |Prof\. |Dr\. |ড\. )+/, '').trim()[0];
+
 // "SEAT_CANCELLATION" → "Seat cancellation"
 export const humanize = (value: string) => value.charAt(0) + value.slice(1).toLowerCase().replace(/_/g, ' ');
 
