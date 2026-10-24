@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Loading } from '@/components/Loading';
+import { PhoneLink } from '@/components/PhoneLink';
 import { formatDate, formatTaka, humanize } from '@/lib/format';
 import { useSession } from '@/lib/session';
 import { useData } from '@/lib/use-data';
@@ -11,6 +12,7 @@ type Overview = {
   unreadNotifications: number;
   latestNotices: { id: string; title: string; priority: string; createdAt: string }[];
   room?: { roomNumber: string; floor: number; wing: string | null; bedNumber: number; roommates: { name: string; bedNumber: number }[] } | null;
+  houseTutor?: { name: string; email: string; phone: string } | null;
   unpaidBills?: { count: number; total: number };
   pendingApplications?: number | Record<string, number>;
   upcomingVisitors?: number;
@@ -74,6 +76,21 @@ export default function DashboardPage() {
                         data.room.roommates.length ? ` · with ${data.room.roommates.map((r) => r.name).join(', ')}` : ''
                       }`
                     : 'The hall office will let you know.'
+                }
+              />
+            )}
+            {data.room && (
+              <Tile
+                label={`House tutor, floor ${data.room.floor}`}
+                value={data.houseTutor?.name ?? 'Not assigned yet'}
+                note={
+                  data.houseTutor ? (
+                    <>
+                      <PhoneLink phone={data.houseTutor.phone} /> · <a href={`mailto:${data.houseTutor.email}`}>{data.houseTutor.email}</a>
+                    </>
+                  ) : (
+                    'The hall office will let you know.'
+                  )
                 }
               />
             )}
