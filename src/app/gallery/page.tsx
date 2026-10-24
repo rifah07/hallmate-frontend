@@ -1,3 +1,4 @@
+import { Empty } from '@/components/Loading';
 import { PageHeader } from '@/components/PageHeader';
 import { Unavailable } from '@/components/Unavailable';
 import { getPublic } from '@/lib/public-api';
@@ -13,6 +14,7 @@ export default async function GalleryPage() {
       <section className="section">
         <div className="container">
           {items === null && <Unavailable what="gallery" />}
+          {items?.length === 0 && <Empty title="No photos yet">The hall office will add photos of the hall here.</Empty>}
           <div className="gallery">
             {items?.map((g) => (
               <figure key={g.id}>
