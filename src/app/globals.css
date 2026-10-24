@@ -1518,6 +1518,58 @@ tr:last-child td {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* The provost's message: Bangla or English paragraphs, line breaks kept */
+.provost-message {
+  margin-top: 0.5rem;
+  padding: 1.5rem 1.75rem;
+  border-left: 3px solid var(--plum-500);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--blush-50);
+}
+.provost-message h2 {
+  margin: 0;
+  font-family: var(--font-bn-serif), var(--font-display);
+  font-size: 1.6rem;
+}
+.provost-message .kicker {
+  margin: 0.2rem 0 1rem;
+}
+.provost-message p {
+  white-space: pre-line;
+}
+.provost-message p:last-child {
+  margin-bottom: 0;
+}
+
+/* About: the hall's picture beside its description */
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.about-figure {
+  margin: 0;
+}
+.about-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -30px rgb(46 24 53 / 0.35);
+}
+.about-figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+@media (max-width: 860px) {
+  .about-intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 
 /* Events */
 .event-grid {

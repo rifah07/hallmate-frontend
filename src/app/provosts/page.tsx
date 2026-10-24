@@ -1,7 +1,7 @@
 import { PageHeader } from '@/components/PageHeader';
 import { PersonCard } from '@/components/PersonCard';
 import { Unavailable } from '@/components/Unavailable';
-import { yearOf } from '@/lib/format';
+import { langOf, yearOf } from '@/lib/format';
 import { getPublic } from '@/lib/public-api';
 import type { Provost } from '@/lib/types';
 
@@ -24,8 +24,9 @@ export default async function ProvostsPage() {
                 role={p.isCurrent ? 'Provost' : 'Former provost'}
                 tag={p.isCurrent ? 'Current' : undefined}
               >
+                {p.department && <p lang={langOf(p.department)}>{p.department}</p>}
                 <p className="muted small">
-                  {yearOf(p.tenureStart)} – {p.tenureEnd ? yearOf(p.tenureEnd) : 'today'}
+                  {yearOf(p.tenureStart)} to {p.tenureEnd ? yearOf(p.tenureEnd) : 'today'}
                 </p>
               </PersonCard>
             ))}

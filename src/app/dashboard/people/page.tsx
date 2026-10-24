@@ -24,6 +24,7 @@ type Person = {
   department: string | null;
   session: string | null;
   designation: string | null;
+  provostMessage?: string | null;
   assignedFloor: number | null;
   isFirstLogin: boolean;
   currentRoom?: { roomNumber: string; floor: number };
@@ -175,7 +176,7 @@ export default function PeoplePage() {
                   </td>
                   <td className="num">{p.universityId}</td>
                   <td>{ROLE_LABEL[p.role]}</td>
-                  <td>{p.currentRoom?.roomNumber ?? '—'}</td>
+                  <td>{p.currentRoom?.roomNumber ?? 'No room'}</td>
                   <td>
                     <Status value={p.isFirstLogin && p.accountStatus === 'ACTIVE' ? 'NOT_ACTIVATED' : p.accountStatus} />
                   </td>
@@ -405,7 +406,7 @@ function PersonPanel({
         </div>
         <div>
           <dt>Mobile</dt>
-          <dd>{person.phone || '—'}</dd>
+          <dd>{person.phone || 'Not given'}</dd>
         </div>
         {person.department && (
           <div>
@@ -438,6 +439,19 @@ function PersonPanel({
               ...(isAdmin ? ([{ name: 'email', label: 'Email', type: 'email', required: false, defaultValue: person.email }] as Field[]) : []),
               ...(person.role === 'STUDENT' ? ([{ name: 'department', label: 'Department', required: false, defaultValue: person.department ?? '' }] as Field[]) : []),
               ...(isAdmin && person.role !== 'STUDENT' ? ([{ name: 'designation', label: 'Designation', required: false, defaultValue: person.designation ?? '' }] as Field[]) : []),
+              ...(isAdmin && person.role === 'PROVOST'
+                ? ([
+                    {
+                      name: 'provostMessage',
+                      label: 'প্রভোস্টের বাণী (message from the provost)',
+                      hint: 'Shown on the public Provost page, in Bangla, English or both. Line breaks are kept.',
+                      multiline: true,
+                      required: false,
+                      maxLength: 3000,
+                      defaultValue: person.provostMessage ?? '',
+                    },
+                  ] as Field[])
+                : []),
             ]}
             onSubmit={async (values) => {
               // Only what changed: the API refuses fields this viewer may not edit
