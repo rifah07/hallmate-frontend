@@ -5,6 +5,10 @@ The website and resident portal for **Nawab Faizunnesa Chowdhurani Hall**, the w
 **Stack:** Next.js 16 (App Router) · React 19 · TypeScript · plain CSS with design tokens · no UI library · no tracking
 **Live:** [hallmate.vercel.app](https://hallmate.vercel.app) · **Try every role:** [demo accounts](https://github.com/rifah07/hallmate-backend/blob/master/docs/DEMO_ACCOUNTS.md) (read-only) · **API:** [hallmate-backend](https://github.com/rifah07/hallmate-backend) (Express 5, Prisma, PostgreSQL)
 
+[![A tour of HallMate: the public site, then a resident, an administrator and a guard](docs/demo.gif)](docs/demo.mp4)
+
+▶ **[Watch the 2-minute demo with captions](docs/demo.mp4)**: the public site, then a resident's ID card, bills and visitors, the administrator's people, floor plan and billing, and the guard at the gate.
+
 | Resident dashboard | Digital ID card |
 |---|---|
 | ![Resident dashboard](docs/screenshots/resident-dashboard.png) | ![Digital hall ID card with QR code](docs/screenshots/id-card.png) |
