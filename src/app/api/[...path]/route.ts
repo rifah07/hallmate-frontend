@@ -13,7 +13,7 @@ const RESPONSE_HEADERS = ['content-type', 'location', 'content-disposition', 'ca
 
 async function proxy(req: NextRequest, { params }: RouteContext<'/api/[...path]'>) {
   const { path } = await params;
-  const url = `${process.env.BACKEND_URL}/api/${path.map(encodeURIComponent).join('/')}${req.nextUrl.search}`;
+  const url = new URL(`/api/${path.map(encodeURIComponent).join('/')}${req.nextUrl.search}`, process.env.BACKEND_URL);
 
   const headers = new Headers();
   for (const name of REQUEST_HEADERS) {

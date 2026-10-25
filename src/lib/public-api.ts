@@ -5,7 +5,7 @@ import 'server-only';
 // calm message instead of failing (or failing the build).
 export async function getPublic<T>(path: string, revalidate = 300): Promise<T | null> {
   try {
-    const res = await fetch(`${process.env.BACKEND_URL}/api/public/${path}`, {
+    const res = await fetch(new URL(`/api/public/${path}`, process.env.BACKEND_URL), {
       headers: { 'x-internal-key': process.env.INTERNAL_API_KEY ?? '' },
       next: { revalidate },
     });
